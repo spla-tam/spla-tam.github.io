@@ -5,11 +5,11 @@
         
   <meta charset="utf-8">
   <meta name="description"
-        content="SplaTAM: Splat, Track & Map 3D Gaussians for Dense RGB-D SLAM">
+        content="Splat-SLAM: Dense RGB-D SLAM via 3D Gaussian Splatting">
   <meta name="keywords" content="SLAM, RGB-D, Dense, Tracking, Mapping, Pose Estimation, Splats, 3D Gaussian Splatting, Gaussians">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <meta property="og:image" content="assets/Thumbnail.png" />         -->
-  <title>SplaTAM: Splat, Track & Map 3D Gaussians for Dense RGB-D SLAM</title>
+  <title>Splat-SLAM: Dense RGB-D SLAM via 3D Gaussian Splatting</title>
 
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -71,7 +71,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-2 publication-title">SplaTAM: Splat, Track & Map 3D Gaussians<br>for Dense RGB-D SLAM</h1>
+          <h1 class="title is-2 publication-title">Splat-SLAM: Dense RGB-D SLAM<br>via 3D Gaussian Splatting</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">CVPR Paper ID: 7620</span>
           </div>
@@ -84,15 +84,31 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- <video id="teaser" autoplay muted loop playsinline height="100%"> -->
-        <!-- <img source src="./data/method_viz/Splash GIF.gif" /> -->
-        <video id="dinov2_gardens" autoplay controls muted loop playsinline height="100%">
-          <source src="./data/teaser/SplaTAM-teaser.mp4"
-                  type="video/mp4">
-        </video>
-      <!-- </video> -->
+        <div class="container is-max-desktop">
+        <div class="columns is-centered">
+      
+        <div class="column has-text-centered">
+          <div class="content">
+            <video id="s1_recon" autoplay controls muted loop playsinline height="100%">
+              <source src="./data/scannetpp/scannetpp_s1_recon.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      
+        <div class="column has-text-centered">
+          <div class="content">
+            <video id="s1_nvs" autoplay controls muted loop playsinline height="100%">
+              <source src="./data/scannetpp/scannetpp_s1_nvs_loop.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        </div>
+        </div>
       <h2 class="subtitle has-text-centered">
-        <span>SplaTAM enables precise camera tracking and high-fidelity reconstruction<br>in challenging real-world scenarios.</span>
+        <span>Splat-SLAM enables precise camera tracking and high-fidelity reconstruction<br>in challenging real-world scenarios.</span>
       </h2>
     </div>
   </div>
@@ -110,9 +126,9 @@
             Dense simultaneous localization and mapping (SLAM) is pivotal for embodied scene understanding.
             Recent work has shown that 3D Gaussians enable high-quality reconstruction and real-time rendering of scenes using multiple posed cameras.
             In this light, we show for the first time that representing a scene by a 3D Gaussian Splatting radiance field can enable dense SLAM using a single unposed monocular RGB-D camera.
-            Our method, SplaTAM, addresses the limitations of prior radiance field-based representations, including fast rendering and optimization, the ability to determine if areas have been previously mapped, and structured map expansion by adding more Gaussians.
+            Our method, Splat-SLAM, addresses the limitations of prior radiance field-based representations, including fast rendering and optimization, the ability to determine if areas have been previously mapped, and structured map expansion by adding more Gaussians.
             In particular, we employ an online tracking and mapping pipeline while tailoring it to specifically use an underlying Gaussian representation and silhouette-guided optimization via differentiable rendering.
-            Extensive experiments on simulated and real-world data show that SplaTAM achieves up to 2 X state-of-the-art performance in camera pose estimation, map construction, and novel-view synthesis, demonstrating its superiority over existing approaches.
+            Extensive experiments on simulated and real-world data show that Splat-SLAM achieves up to 2 X state-of-the-art performance in camera pose estimation, map construction, and novel-view synthesis, demonstrating its superiority over existing approaches.
           </p>
         </div>
       </div>
