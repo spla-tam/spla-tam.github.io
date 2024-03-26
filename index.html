@@ -72,7 +72,8 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-2 publication-title">SplaTAM: Splat, Track & Map 3D Gaussians<br>for Dense RGB-D SLAM</h1>
-          <div class="is-size-5 publication-authors">
+          <h2 class="title is-6 publlication-title">CVPR 2024</h2>
+          <div class="is-size-6 publication-authors">
             <span class="author-block">
               <a href="https://nik-v9.github.io/">Nikhil Keetha</a><sup>1</sup>,</span>
               <span class="author-block">
@@ -237,12 +238,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Dense simultaneous localization and mapping (SLAM) is pivotal for embodied scene understanding.
-            Recent work has shown that 3D Gaussians enable high-quality reconstruction and real-time rendering of scenes using multiple posed cameras.
-            In this light, we show for the first time that representing a scene by a 3D Gaussian Splatting radiance field can enable dense SLAM using a single unposed monocular RGB-D camera.
-            Our method, SplaTAM, addresses the limitations of prior radiance field-based representations, including fast rendering and optimization, the ability to determine if areas have been previously mapped, and structured map expansion by adding more Gaussians.
-            In particular, we employ an online tracking and mapping pipeline while tailoring it to specifically use an underlying Gaussian representation and silhouette-guided optimization via differentiable rendering.
-            Extensive experiments on simulated and real-world data show that SplaTAM achieves up to 2 X state-of-the-art performance in camera pose estimation, map construction, and novel-view synthesis, demonstrating its superiority over existing approaches.
+            Dense simultaneous localization and mapping (SLAM) is crucial for robotics and augmented reality applications. 
+            However, current methods are often hampered by the non-volumetric or implicit way they represent a scene. 
+            This work introduces SplaTAM, an approach that, for the first time, leverages explicit volumetric representations, i.e., 3D Gaussians, to enable high-fidelity reconstruction from a single unposed RGB-D camera, surpassing the capabilities of existing methods. 
+            SplaTAM employs a simple online tracking and mapping system tailored to the underlying Gaussian representation. 
+            It utilizes a silhouette mask to elegantly capture the presence of scene density. 
+            This combination enables several benefits over prior representations, including fast rendering and dense optimization, quickly determining if areas have been previously mapped, and structured map expansion by adding more Gaussians. 
+            Extensive experiments show that SplaTAM achieves up to 2x superior performance in camera pose estimation, map construction, and novel-view synthesis over existing methods, paving the way for more immersive high-fidelity SLAM applications.
           </p>
         </div>
       </div>
@@ -611,6 +613,40 @@
     </div>
 </section>
 
+<section class="section" id="concurrent work">
+  <div class="container is-max-desktop content">
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Concurrent work</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Given the fast pace of research these days, five concurrent SLAM papers using 3D Gaussians as the underlying representation showed up on arXiv. Surprisingly, each one had a unique way to do SLAM with 3D Gaussians. 
+          </p>
+          <p>
+            GS-SLAM does coarse to fine camera tracking based on sparse selection of Gaussians.
+          </p>
+          <p>
+            Gaussian Splatting SLAM does monocular SLAM, where densification is performed using depth statistics.
+          </p>
+          <p>
+            Photo-SLAM couples ORB-SLAM3 based camera tracking with 3DGS based mapping.
+          </p>
+          <p>
+            COLMAP-Free 3DGS uses monocular depth estimation with 3DGS.
+          </p>
+          <p>
+            Gaussian-SLAM couples DROID-SLAM based camera tracking with active & inactive 3DGS sub-maps.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
 <script type="text/javascript">
   $(function() {
   var screenWidth = $(window).width();
@@ -630,11 +666,11 @@
   <div class="container is-max-desktop content">
     <h2 class="title is-3">BibTeX</h2>
     <pre><code>
-      @article{keetha2023splatam,
+      @inproceedings{keetha2024splatam,
         title={SplaTAM: Splat, Track & Map 3D Gaussians for Dense RGB-D SLAM},
         author={Keetha, Nikhil and Karhade, Jay and Jatavallabhula, Krishna Murthy and Yang, Gengshan and Scherer, Sebastian and Ramanan, Deva and Luiten, Jonathon},
-        journal={arXiv preprint},
-        year={2023}
+        booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+        year={2024}
       }
     </code></pre>
   </div>
